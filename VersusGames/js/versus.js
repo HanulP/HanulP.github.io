@@ -5,56 +5,75 @@ $(document).ready(function(){
 
 	/*Tab Transitions*/
 	$('#tab1').click(function(event){
-		if(!$('#tab1').parent().hasClass('.active')) {
-			event.preventDefault;
-			$('section').hide('blind')
-			$('#home').show('blind')
-		};
+		if(!$('#tab1').parent().hasClass('active')) {
+			$('section').hide('slide', {direction: 'right'}, 300)
+			$('#home').delay(300).show('slide', {direction: 'left'}, 300)
+		}
 	});
 	$('#tab2').click(function(event){
 		if(!$('#tab2').parent().hasClass('active')) {
-			$('section').hide('blind')
-			$('#about').show('blind')
+			if($('#tab1').parent().hasClass('active')) {
+				$('section').hide('slide', {direction: 'left'}, 300)
+				$('#about').delay(300).show('slide', {direction: 'right'}, 300)
+			}
+			else {
+				$('section').hide('slide', {direction: 'right'}, 300)
+				$('#about').delay(300).show('slide', {direction: 'left'}, 300)
+			}
 		};
 	});
 	$('#tab3').click(function(event){
-		event.preventDefault;
 		if(!$('#tab3').parent().hasClass('active')) {
-			event.preventDefault;
-			$('section').hide('blind')
-			$('#games').show('blind')
+			if ($('#tab1').parent().hasClass('active')||$('#tab2').parent().hasClass('active')) {
+				$('section').hide('slide', {direction: 'left'}, 300)
+				$('#games').delay(300).show('slide',{direction: 'right'}, 300)
+			}
+			else{
+				$('section').hide('slide', {direction: 'right'}, 300)
+				$('#games').delay(300).show('slide',{direction: 'left'}, 300)
+			}
 		};
 	});
 	$('#tab4').click(function(event){
-		event.preventDefault;
 		if(!$('#tab4').parent().hasClass('active')) {
-			event.preventDefault;
-			$('section').hide('blind')
-			$('#events').show('blind')
+			if($('#tab1').parent().hasClass('active')||$('#tab2').parent().hasClass('active')||$('#tab3').parent().hasClass('active')){
+				$('section').hide('slide', {direction: 'left'}, 300)
+				$('#events').delay(300).show('slide',{direction: 'right'}, 300)
+			}
+			else {
+				$('section').hide('slide', {direction: 'right'}, 300)
+				$('#events').delay(300).show('slide',{direction: 'left'}, 300)
+			}
 		};
 	});
 	$('#tab5').click(function(event){
-		event.preventDefault;
 		if(!$('#tab5').parent().hasClass('active')) {
-			event.preventDefault;
-			$('section').hide('blind')
-			$('#buylist').show('blind')
+			if($('#tab6').parent().hasClass('active')||$('#tab7').parent().hasClass('active')){
+				$('section').hide('slide', {direction: 'right'}, 300)
+				$('#buylist').delay(300).show('slide',{direction: 'left'}, 300)
+			}
+			else {
+				$('section').hide('slide', {direction: 'left'}, 300)
+				$('#buylist').delay(300).show('slide',{direction: 'right'}, 300)
+			}
 		};
 	});
 	$('#tab6').click(function(event){
-		event.preventDefault;
 		if(!$('#tab6').parent().hasClass('active')) {
-			event.preventDefault;
-			$('section').hide('blind')
-			$('#supplies').show('blind')
+			if($('#tab7').parent().hasClass('active')){
+				$('section').hide('slide', {direction: 'right'}, 300)
+				$('#supplies').delay(300).show('slide',{direction: 'left'}, 300)
+			}
+			else {
+				$('section').hide('slide', {direction: 'left'}, 300)
+				$('#supplies').delay(300).show('slide',{direction: 'right'}, 300)
+			}
 		};
 	});
 	$('#tab7').click(function(event){
-		event.preventDefault;
 		if(!$('#tab7').parent().hasClass('active')) {
-			event.preventDefault;
-			$('section').hide('blind')
-			$('#contact').show('blind')
+				$('section').hide('slide', {direction: 'left'}, 300)
+				$('#contact').delay(300).show('slide',{direction: 'right'}, 300)
 		};
 	});
 

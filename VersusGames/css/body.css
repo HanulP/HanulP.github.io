@@ -3,7 +3,11 @@
 	width: 200px;
 }
 .container {
+	margin: 50px 0;
 	width: 66.666%;
+}
+h1 {
+	padding-bottom: 60px;
 }
 #home {
 	display: none;
@@ -14,10 +18,27 @@
 #games {
 	display: none;
 }
+#games img {
+	display: block;
+	margin: 0 auto;
+	height: 200px;
+}
+#games p {
+	text-align: center;
+}
+#games .col-md-4:hover{
+	background: #323232;
+}
 #events {
 	display: none;
 }
-buylist {
+#buylist {
+	display: none;
+}
+#supplies {
+	display: none;
+}
+#contact {
 	display: none;
 }
 /*Carousel*/
@@ -38,6 +59,27 @@ buylist {
 	width: 100%;
 }
 
+
 p {
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#FCB924;
+   color: black;
+}
+#footer p{
+	text-align: center;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
 }
