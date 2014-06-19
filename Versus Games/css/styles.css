@@ -1,6 +1,6 @@
 @import "header.css";
 @import "body.css";
-@import "home.css";
+@import 'bootstrap.min.css';
 
 html {
 	background-color: black;
@@ -8,11 +8,6 @@ html {
 body {
 	background-color: black;
 	color: white;
-}
-
-/*About Page*/
-#about {
-	display: none;
 }
 
 @media (max-width: 1200px){
