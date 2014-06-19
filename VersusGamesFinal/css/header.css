@@ -1,0 +1,26 @@
+/*Header*/
+.vs-logo{
+	display: block;
+	margin: 0 auto;
+}
+.navbar {
+	background: black;
+}
+.navbar-inverse {
+	background-color: black;
+}
+.navbar-brand, .navbar-nav li a {
+	color: black;
+}
+.navbar-nav li a:hover {
+	color: white;
+	background-color: black;
+}
+#nav.active a{
+	color: white;
+	background-color: black;
+	border-bottom: none;
+}
+#nav a{
+	font-family: 'Orbitron', sans-serif;
+}
