@@ -4,10 +4,10 @@
 	margin: 0 auto;
 }
 .navbar {
-	background: -webkit-radial-gradient(#FCB924, #FF6666);
-	background: -moz-radial-gradient(#FCB924, #FF6666);
-	background: -o-radial-gradient(#FCB924, #FF6666);
-	background: radial-gradient(#FCB924, #FF6666);
+	background: black;
+}
+.navbar-inverse {
+	background-color: black;
 }
 .navbar-brand, .navbar-nav li a {
 	color: black;
