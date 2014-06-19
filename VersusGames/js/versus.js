@@ -4,37 +4,58 @@ $(document).ready(function(){
 	});
 
 	/*Tab Transitions*/
-	$('#tab1').click(function(){
-		event.preventDefault;
+	$('#tab1').click(function(event){
 		if(!$('#tab1').parent().hasClass('.active')) {
 			event.preventDefault;
-			$('#about').hide('slide', 1000);
-			$('#home').show('slide', 1000);
-			
+			$('section').hide('blind')
+			$('#home').show('blind')
 		};
 	});
-	$('#tab2').click(function(){
-		event.preventDefault;
-		if($('#tab1').parent().hasClass('active')) {
-			event.preventDefault;
-		 	$('#about').show().delay(100);
-			$('section').hide('slide', {direction: 'left'}, 300);
-			$('#about').show('slide', {direction: 'right'}, 300);
-		}
-		else {
-			event.preventDefault;
-			$('#about').show().delay(100);
-			$('section').hide('slide', {direction: 'right'}, 300);
-			$('#about').show('slide', {direction: 'left'}, 300);
-		}
+	$('#tab2').click(function(event){
+		if(!$('#tab2').parent().hasClass('active')) {
+			$('section').hide('blind')
+			$('#about').show('blind')
+		};
 	});
-	$('#tab3').click(function(){
+	$('#tab3').click(function(event){
 		event.preventDefault;
-		if($('#tab1').parent().hasClass('active') || $('#tab2').parent().hasClass('active')){
-			$('#games').show();
-			$('section').hide('slide', {direction: 'left'}, 300);
-			$('#games').show('slide', {direction: 'right'}, 300);
-		}
+		if(!$('#tab3').parent().hasClass('active')) {
+			event.preventDefault;
+			$('section').hide('blind')
+			$('#games').show('blind')
+		};
+	});
+	$('#tab4').click(function(event){
+		event.preventDefault;
+		if(!$('#tab4').parent().hasClass('active')) {
+			event.preventDefault;
+			$('section').hide('blind')
+			$('#events').show('blind')
+		};
+	});
+	$('#tab5').click(function(event){
+		event.preventDefault;
+		if(!$('#tab5').parent().hasClass('active')) {
+			event.preventDefault;
+			$('section').hide('blind')
+			$('#buylist').show('blind')
+		};
+	});
+	$('#tab6').click(function(event){
+		event.preventDefault;
+		if(!$('#tab6').parent().hasClass('active')) {
+			event.preventDefault;
+			$('section').hide('blind')
+			$('#supplies').show('blind')
+		};
+	});
+	$('#tab7').click(function(event){
+		event.preventDefault;
+		if(!$('#tab7').parent().hasClass('active')) {
+			event.preventDefault;
+			$('section').hide('blind')
+			$('#contact').show('blind')
+		};
 	});
 
 	$('#nav > a').click(function(){

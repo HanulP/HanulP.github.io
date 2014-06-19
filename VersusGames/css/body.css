@@ -1,6 +1,24 @@
 /*Body*/
+.container img {
+	width: 200px;
+}
 .container {
 	width: 66.666%;
+}
+#home {
+	display: none;
+}
+#about {
+	display: none;
+}
+#games {
+	display: none;
+}
+#events {
+	display: none;
+}
+buylist {
+	display: none;
 }
 /*Carousel*/
 #myCarousel {
